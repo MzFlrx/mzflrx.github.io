@@ -1,0 +1,1 @@
+[约瑟夫环问题](./Joseph_Ring_problem_variant.md)
