@@ -1,3 +1,11 @@
+<!--
+ * @Author: MzFlrx lifangyi01@outlook.com
+ * @Date: 2025-11-23 22:03:35
+ * @LastEditors: MzFlrx lifangyi01@outlook.com
+ * @LastEditTime: 2025-11-23 23:17:51
+ * @FilePath: \mzflrx.github.io\NoteBook\Java\CoreJava12\chapter9-集合.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 ## 9.1 Java集合框架
 ### 口与实现分离
 ### 9.1.2 Collection 接口
@@ -81,3 +89,29 @@ EnumSet内部实现为一个位序列。如果对应的值在集中出现，对�
 EnumSet类没有公共构造器。要使用静态工厂方法构造这个集。
 
 ### 9.4.7 标识散列映射
+IdentityHashMap，键对象地址不同，则作为不同的对象，键的值可以相同。
+
+## 9.5 副本与视图
+
+### 9.5.1 小集合
+使用静态对象创建Map
+
+```java
+import static java.util.Map.*;
+
+Map<String, Integer> scores = ofEntries(
+    entry("Peter", 2),
+    entry("Paul", 3),
+    entry("Mary", 5)
+);
+```
+
+### 9.5.2 不可修改的副本和视图
+建立集合的不可修改副本：copyOf()
+
+建立不可修改视图：
+Collection.unmodifiableCollection
+...
+
+### 9.5.3 子范围
+
